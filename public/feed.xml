@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>AAT University News &amp; Announcements</title>
+    <link>https://aatu.edu.ng/news</link>
+    <description>The latest news, official announcements and academic developments from Abdulrasaq Abubakar Toyin University.</description>
+    <language>en-ng</language>
+    <lastBuildDate>Tue, 20 Oct 2026 10:22:19 GMT</lastBuildDate>
+    <item>
+      <title>Guidance for candidates on verifying admission information</title>
+      <link>https://aatu.edu.ng/news/admissions-office-guidance</link>
+      <guid isPermaLink="true">https://aatu.edu.ng/news/admissions-office-guidance</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Notice</category>
+      <description>Candidates are encouraged to confirm programme availability, requirements and application details directly with the Admissions Office.</description>
+    </item>
+    <item>
+      <title>2026/2027 undergraduate admission exercise now open</title>
+      <link>https://aatu.edu.ng/news/2026-2027-admissions-open</link>
+      <guid isPermaLink="true">https://aatu.edu.ng/news/2026-2027-admissions-open</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Announcement</category>
+      <description>Prospective candidates can now review entry requirements, available programmes and the application guidance for the new session.</description>
+    </item>
+    <item>
+      <title>Admission requirements for the 2026/2027 session</title>
+      <link>https://aatu.edu.ng/news/admission-requirements-released</link>
+      <guid isPermaLink="true">https://aatu.edu.ng/news/admission-requirements-released</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Admission</category>
+      <description>A summary of UTME and Direct Entry requirements, alongside the full list of programmes available across the university.</description>
+    </item>
+    <item>
+      <title>Professor Olayemi Mikail Olaniyi appointed first substantive Vice-Chancellor</title>
+      <link>https://aatu.edu.ng/news/vice-chancellor-appointment</link>
+      <guid isPermaLink="true">https://aatu.edu.ng/news/vice-chancellor-appointment</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+      <category>University News</category>
+      <description>The appointment takes effect from 4 September 2026 and marks a new chapter in the university’s academic development.</description>
+    </item>
+    <item>
+      <title>Additional 15 undergraduate programmes approved for 2026/2027</title>
+      <link>https://aatu.edu.ng/news/nuc-approves-fifteen-programmes</link>
+      <guid isPermaLink="true">https://aatu.edu.ng/news/nuc-approves-fifteen-programmes</guid>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Academic Development</category>
+      <description>The newly approved programmes expand AATU’s academic portfolio across law, health sciences, computing and the social sciences.</description>
+    </item>
+    <item>
+      <title>Campus facilities take shape ahead of academic take-off</title>
+      <link>https://aatu.edu.ng/news/campus-ready-for-academic-take-off</link>
+      <guid isPermaLink="true">https://aatu.edu.ng/news/campus-ready-for-academic-take-off</guid>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate>
+      <category>Campus</category>
+      <description>Teaching spaces, library resources, laboratories and computing facilities have been developed to support the university’s academic programmes.</description>
+    </item>
+  </channel>
+</rss>
