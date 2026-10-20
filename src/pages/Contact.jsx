@@ -42,7 +42,7 @@ const socialLinks = [
 export default function Contact() {
   usePageMeta(
     'Contact Us',
-    'Contact Abdulrasaq Abubakar Toyin University, Oke-Ogba, Ganmo, Ilorin, Kwara State. Telephone, email, campus location and enquiry form.',
+    'Contact AbdulRasaq Abubakar Toyin University, Oke-Ogba, Ganmo, Ilorin, Kwara State. Telephone, email, campus location and enquiry form.',
   )
 
   const [form, setForm] = useState(initialForm)

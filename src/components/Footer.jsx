@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="max-w-2xl">
             <span className="eyebrow !text-navy-300">Admissions 2026/2027</span>
             <h2 className="display mt-5 text-4xl leading-[1.02] sm:text-5xl">
-              Begin your journey at
+              Begin your journey at{' '}
               <br />
               <span className="italic text-gold-300">AAT University.</span>
             </h2>

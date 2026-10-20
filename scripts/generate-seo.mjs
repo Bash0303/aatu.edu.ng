@@ -94,7 +94,7 @@ const feed = `<?xml version="1.0" encoding="UTF-8"?>
   <channel>
     <title>AAT University News &amp; Announcements</title>
     <link>${siteUrl}/news</link>
-    <description>The latest news, official announcements and academic developments from Abdulrasaq Abubakar Toyin University.</description>
+    <description>The latest news, official announcements and academic developments from AbdulRasaq Abubakar Toyin University.</description>
     <language>en-ng</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 ${feedItems}

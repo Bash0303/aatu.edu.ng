@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { admissionFaqs, getArticle, getProgramme } from '../data/site'
+import { admissionFaqs, getArticle, getProgramme, leadership } from '../data/site'
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_IMAGE,
@@ -20,7 +20,7 @@ const ROBOTS_NOINDEX = 'noindex, nofollow'
 
 const pageTypes = {
   '/about': 'AboutPage',
-  '/management': 'AboutPage',
+  '/management': 'ProfilePage',
   '/contact': 'ContactPage',
   '/academics': 'CollectionPage',
   '/news': 'CollectionPage',
@@ -92,6 +92,7 @@ export default function usePageMeta(title, description, options = {}) {
     pageType: pageTypeOption,
     article: articleOption,
     programme: programmeOption,
+    person: personOption,
     faqs: faqsOption,
   } = options
 
@@ -110,6 +111,9 @@ export default function usePageMeta(title, description, options = {}) {
   const programme =
     programmeOption ||
     (isProgrammeRoute ? getProgramme(segments[2]) : undefined)
+  const person =
+    personOption ||
+    (pathname === '/management' ? leadership.viceChancellor : undefined)
   const faqs =
     faqsOption || (pathname === '/admissions' ? admissionFaqs : undefined)
 
@@ -135,7 +139,7 @@ export default function usePageMeta(title, description, options = {}) {
       article?.category,
       'AAT University',
       'AATU',
-      'Abdulrasaq Abubakar Toyin University',
+      'AbdulRasaq Abubakar Toyin University',
       'Ilorin',
       'Kwara State',
     ]
@@ -212,6 +216,7 @@ export default function usePageMeta(title, description, options = {}) {
         breadcrumbs,
         article,
         programme,
+        person,
         faqs,
       }),
     )
@@ -229,6 +234,7 @@ export default function usePageMeta(title, description, options = {}) {
     pageTitle,
     pageType,
     pathname,
+    person,
     programme,
     type,
   ])

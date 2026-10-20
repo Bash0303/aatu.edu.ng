@@ -85,7 +85,7 @@ const facilities = [
 export default function About() {
   usePageMeta(
     'About the University',
-    'Learn about Abdulrasaq Abubakar Toyin University — its purpose, academic development, leadership and campus in Oke-Ogba, Ganmo, Ilorin, Kwara State.',
+    'Learn about AbdulRasaq Abubakar Toyin University — its purpose, academic development, leadership and campus in Oke-Ogba, Ganmo, Ilorin, Kwara State.',
   )
 
   return (
@@ -97,7 +97,7 @@ export default function About() {
             A university established to advance <span className="italic text-gold-300">generational development.</span>
           </>
         }
-        description="Abdulrasaq Abubakar Toyin University is a private, not-for-profit institution in Oke-Ogba, Ganmo, Ilorin, Kwara State, built around a simple conviction: education should change lives and lift communities."
+        description="AbdulRasaq Abubakar Toyin University is a private, not-for-profit institution in Oke-Ogba, Ganmo, Ilorin, Kwara State, built around a simple conviction: education should change lives and lift communities."
         crumbs={[{ label: 'About' }]}
       >
         <div className="flex flex-wrap gap-3">
@@ -122,7 +122,7 @@ export default function About() {
             <Reveal delay={120}>
               <div className="mt-6 space-y-4 text-[0.92rem] leading-relaxed text-navy-900/75">
                 <p>
-                  Abdulrasaq Abubakar Toyin University, known as AAT University or AATU, is a
+                  AbdulRasaq Abubakar Toyin University, known as AAT University or AATU, is a
                   private, not-for-profit university located at Oke-Ogba, Ganmo, in Ilorin, Kwara
                   State, Nigeria. The university exists to expand access to quality higher
                   education and to prepare graduates for meaningful contribution in a global
@@ -401,11 +401,14 @@ export default function About() {
                   <p className="mt-2 font-display text-[1.6rem] leading-tight text-navy-950">
                     Professor Olayemi Mikail Olaniyi
                   </p>
-                  <p className="mt-1 text-[0.72rem] text-navy-900/65">Effective 4 September 2026</p>
+                  <p className="mt-1 text-[0.72rem] text-navy-900/65">Appointed 4 September 2026</p>
                 </div>
-                <span className="grid size-14 shrink-0 place-items-center rounded-full bg-gradient-to-br from-navy-800 to-crest-700 font-display text-lg text-white shadow-[0_10px_24px_-14px_rgba(200,16,46,0.7)]">
-                  OO
-                </span>
+                <img
+                  src={images.viceChancellor}
+                  alt="Professor Olayemi Mikail Olaniyi, Vice-Chancellor of AAT University"
+                  loading="lazy"
+                  className="size-16 shrink-0 rounded-full border border-gold-400/40 object-cover object-top shadow-[0_10px_24px_-14px_rgba(200,16,46,0.5)]"
+                />
               </div>
               <div className="mt-6 flex flex-wrap gap-4 border-t border-navy-950/10 pt-6">
                 <Link

@@ -3,9 +3,17 @@
   <channel>
     <title>AAT University News &amp; Announcements</title>
     <link>https://aatu.edu.ng/news</link>
-    <description>The latest news, official announcements and academic developments from Abdulrasaq Abubakar Toyin University.</description>
+    <description>The latest news, official announcements and academic developments from AbdulRasaq Abubakar Toyin University.</description>
     <language>en-ng</language>
-    <lastBuildDate>Tue, 20 Oct 2026 10:22:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 12:15:32 GMT</lastBuildDate>
+    <item>
+      <title>Vice-Chancellor schedules visits to faculties, directorates and units</title>
+      <link>https://aatu.edu.ng/news/vice-chancellor-faculty-visitation</link>
+      <guid isPermaLink="true">https://aatu.edu.ng/news/vice-chancellor-faculty-visitation</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Notice</category>
+      <description>The two-day schedule covers the University’s faculties on 20 October and directorates and service units on 21 October 2026.</description>
+    </item>
     <item>
       <title>Guidance for candidates on verifying admission information</title>
       <link>https://aatu.edu.ng/news/admissions-office-guidance</link>
@@ -37,6 +45,14 @@
       <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
       <category>University News</category>
       <description>The appointment takes effect from 4 September 2026 and marks a new chapter in the university’s academic development.</description>
+    </item>
+    <item>
+      <title>AATU signs Beyond Benign Green Chemistry Commitment</title>
+      <link>https://aatu.edu.ng/news/green-chemistry-commitment</link>
+      <guid isPermaLink="true">https://aatu.edu.ng/news/green-chemistry-commitment</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Academic Development</category>
+      <description>The commitment places the University among more than 300 institutions worldwide advancing safer, more sustainable chemistry education.</description>
     </item>
     <item>
       <title>Additional 15 undergraduate programmes approved for 2026/2027</title>

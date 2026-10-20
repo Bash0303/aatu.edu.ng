@@ -31,7 +31,7 @@ export default function ProgrammeDetail() {
   usePageMeta(
     programme ? programme.name : 'Programme not found',
     programme
-      ? `${programme.award} at Abdulrasaq Abubakar Toyin University. Entry requirements, award information and admission details.`
+      ? `${programme.award} at AbdulRasaq Abubakar Toyin University. Entry requirements, award information and admission details.`
       : undefined,
   )
 

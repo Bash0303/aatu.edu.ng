@@ -73,7 +73,7 @@ export default function Admissions() {
             Your next chapter starts <span className="italic text-gold-300">here.</span>
           </>
         }
-        description="Everything you need to know about applying to Abdulrasaq Abubakar Toyin University — entry requirements, application steps and the programmes available for the 2026/2027 academic session."
+        description="Everything you need to know about applying to AbdulRasaq Abubakar Toyin University — entry requirements, application steps and the programmes available for the 2026/2027 academic session."
         crumbs={[{ label: 'Admissions' }]}
       >
         <div className="flex flex-wrap gap-3">

@@ -7,6 +7,7 @@ import {
   CalendarDays,
   Check,
   Clock,
+  FileText,
   Link2,
   Mail,
   MessageCircle,
@@ -14,6 +15,7 @@ import {
 import PageHeader from '../components/PageHeader'
 import Reveal from '../components/Reveal'
 import usePageMeta from '../hooks/usePageMeta'
+import { absoluteUrl } from '../lib/seo'
 import { getArticle, news, university } from '../data/site'
 
 const categoryColors = {
@@ -52,7 +54,7 @@ export default function NewsArticle() {
   }
 
   const related = news.filter((item) => item.slug !== article.slug).slice(0, 3)
-  const shareUrl = `https://aatu.edu.ng/news/${article.slug}`
+  const shareUrl = absoluteUrl(`/news/${article.slug}`)
 
   const handleCopy = async () => {
     try {
@@ -123,13 +125,24 @@ export default function NewsArticle() {
       <article className="bg-white py-14 sm:py-16 lg:py-20">
         <div className="container-page">
           <Reveal>
-            <div className="overflow-hidden rounded-2xl bg-navy-100">
-              <img
-                src={article.image}
-                alt=""
-                style={{ objectPosition: article.imagePosition || 'center' }}
-                className="aspect-[16/9] max-h-[34rem] w-full object-cover sm:aspect-[21/9]"
-              />
+            <div>
+              <div className="overflow-hidden rounded-2xl bg-navy-100">
+                <img
+                  src={article.image}
+                  alt={article.imageAlt || ''}
+                  style={{ objectPosition: article.imagePosition || 'center' }}
+                  className={`${article.imageAspect || 'aspect-[16/9] sm:aspect-[21/9]'} max-h-[34rem] w-full ${
+                    article.imageFit === 'contain'
+                      ? 'bg-paper object-contain p-3 sm:p-6'
+                      : 'object-cover'
+                  }`}
+                />
+              </div>
+              {article.imageCaption && (
+                <p className="mt-3 text-[0.68rem] leading-relaxed text-navy-900/55">
+                  {article.imageCaption}
+                </p>
+              )}
             </div>
           </Reveal>
 
@@ -151,6 +164,69 @@ export default function NewsArticle() {
                   )}
                 </div>
               </Reveal>
+
+              {article.documents?.length > 0 && (
+                <Reveal delay={80}>
+                  <div className="mt-10">
+                    <div className="flex items-center gap-2.5">
+                      <span className="grid size-9 place-items-center rounded-full bg-navy-950 text-white">
+                        <FileText className="size-3.5" aria-hidden="true" />
+                      </span>
+                      <div>
+                        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-crest-700">
+                          Official documents
+                        </p>
+                        <p className="mt-0.5 text-[0.72rem] text-navy-900/55">
+                          Primary source material relating to this story.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 space-y-6">
+                      {article.documents.map((document) => (
+                        <figure
+                          key={document.src}
+                          className="overflow-hidden rounded-2xl border border-navy-950/10 bg-paper"
+                        >
+                          <div className="bg-white p-3 sm:p-5">
+                            <img
+                              src={document.src}
+                              alt={document.alt}
+                              loading="lazy"
+                              decoding="async"
+                              className="mx-auto block max-h-[42rem] w-auto max-w-full object-contain"
+                            />
+                          </div>
+                          <figcaption className="border-t border-navy-950/10 p-5 sm:p-6">
+                            <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+                              <div>
+                                <p className="text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-navy-900/55">
+                                  {document.label}
+                                </p>
+                                <p className="mt-1 font-display text-[1.2rem] leading-tight text-navy-950">
+                                  {document.title}
+                                </p>
+                              </div>
+                              <a
+                                href={document.src}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-flex shrink-0 items-center gap-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-navy-900 transition-colors hover:text-crest-700"
+                              >
+                                View full size
+                                <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                              </a>
+                            </div>
+                            <p className="mt-3 text-[0.78rem] leading-relaxed text-navy-900/65">
+                              {document.caption}
+                            </p>
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+              )}
 
               <Reveal delay={100}>
                 <div className="relative my-10 overflow-hidden rounded-2xl border border-gold-400/30 bg-gold-100/40 p-7 sm:p-8">

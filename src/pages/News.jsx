@@ -10,7 +10,7 @@ import { news } from '../data/site'
 export default function News() {
   usePageMeta(
     'News & Announcements',
-    'The latest news, official announcements and academic developments from Abdulrasaq Abubakar Toyin University.',
+    'The latest news, official announcements and academic developments from AbdulRasaq Abubakar Toyin University.',
   )
 
   const categories = useMemo(

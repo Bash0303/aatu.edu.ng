@@ -7,7 +7,7 @@ export const SITE_NAME = 'AAT University'
 export const SITE_FULL_NAME = university.name
 export const DEFAULT_TITLE = `${SITE_NAME} | ${university.motto}`
 export const DEFAULT_DESCRIPTION =
-  'Abdulrasaq Abubakar Toyin University (AATU) is a private not-for-profit university in Oke-Ogba, Ganmo, Ilorin, Kwara State, Nigeria, advancing generational development.'
+  'AbdulRasaq Abubakar Toyin University (AATU) is a private not-for-profit university in Oke-Ogba, Ganmo, Ilorin, Kwara State, Nigeria, advancing generational development.'
 export const DEFAULT_IMAGE = `${SITE_URL}/og-aatu.jpg`
 export const DEFAULT_IMAGE_ALT =
   'AAT University campus in Oke-Ogba, Ganmo, Ilorin, Kwara State, Nigeria'
@@ -133,7 +133,7 @@ export function articleSchema(article) {
     '@id': `${url}#article`,
     headline: article.title,
     description: article.excerpt,
-    image: [DEFAULT_IMAGE],
+    image: [article.image ? absoluteUrl(article.image) : DEFAULT_IMAGE],
     datePublished: article.date,
     dateModified: article.date,
     articleSection: article.category,
@@ -179,6 +179,45 @@ export function faqSchema(faqs) {
   }
 }
 
+export function personSchema(person) {
+  const pageUrl = absoluteUrl('/management')
+  const portrait =
+    typeof person.image === 'string' && person.image.startsWith('/assets/')
+      ? absoluteUrl(person.image)
+      : DEFAULT_IMAGE
+
+  return {
+    '@type': 'Person',
+    '@id': `${pageUrl}#vice-chancellor`,
+    name: person.name,
+    honorificPrefix: 'Professor',
+    givenName: 'Olayemi',
+    additionalName: 'Mikail',
+    familyName: 'Olaniyi',
+    jobTitle: person.role,
+    description: person.summary,
+    image: portrait,
+    url: pageUrl,
+    birthDate: person.birthDate,
+    birthPlace: {
+      '@type': 'Place',
+      name: person.birthPlace,
+    },
+    nationality: person.nationality,
+    knowsAbout: person.specialisations,
+    worksFor: { '@id': `${SITE_URL}/#organization` },
+    alumniOf: (person.education || []).map((item) => ({
+      '@type': 'CollegeOrUniversity',
+      name: item.institution,
+    })),
+    memberOf: (person.memberships || []).map((membership) => ({
+      '@type': 'Organization',
+      name: membership,
+    })),
+    award: (person.awards || []).map((award) => award.title),
+  }
+}
+
 export function buildPageSchema({
   path,
   title,
@@ -187,6 +226,7 @@ export function buildPageSchema({
   breadcrumbs = [],
   article,
   programme,
+  person,
   faqs,
 }) {
   const url = absoluteUrl(path)
@@ -210,9 +250,16 @@ export function buildPageSchema({
     },
   ]
 
+  if (person) {
+    graph[0].mainEntity = {
+      '@id': `${absoluteUrl('/management')}#vice-chancellor`,
+    }
+  }
+
   if (breadcrumbs.length) graph.push(breadcrumbSchema(breadcrumbs))
   if (article) graph.push(articleSchema(article))
   if (programme) graph.push(programmeSchema(programme))
+  if (person) graph.push(personSchema(person))
   if (faqs?.length) graph.push(faqSchema(faqs))
 
   return {

@@ -9,7 +9,7 @@ import { gallery } from '../data/site'
 export default function Gallery() {
   usePageMeta(
     'Campus Gallery',
-    'Explore the campus and environment of Abdulrasaq Abubakar Toyin University in Oke-Ogba, Ganmo, Ilorin, Kwara State.',
+    'Explore the campus and environment of AbdulRasaq Abubakar Toyin University in Oke-Ogba, Ganmo, Ilorin, Kwara State.',
   )
 
   const [activeIndex, setActiveIndex] = useState(null)

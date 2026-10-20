@@ -29,7 +29,7 @@ export default function Logo({ variant = 'dark', compact = false, to = '/' }) {
               isLight ? 'text-white/50' : 'text-navy-900/70'
             }`}
           >
-            Abdulrasaq Abubakar Toyin
+            AbdulRasaq Abubakar Toyin
           </span>
         )}
       </span>

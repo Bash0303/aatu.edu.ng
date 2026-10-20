@@ -1,15 +1,23 @@
 import campusImg from '../assets/aatu campus.jpg'
 import logoImg from '../assets/aatu logo.jpg'
 import flierImg from '../assets/AATU-729x1024.jpg'
+import vcImg from '../assets/vc-olaniyi.jpeg'
+import greenChemistryCertificateImg from '../assets/green-chemistry-certificate.jpeg'
+import beyondBenignLetterImg from '../assets/beyond-benign-letter.jpeg'
+import vcVisitationCircularImg from '../assets/vc-visitation-circular.jpeg'
 
 export const images = {
   campus: campusImg,
   logo: logoImg,
   flier: flierImg,
+  viceChancellor: vcImg,
+  greenChemistryCertificate: greenChemistryCertificateImg,
+  beyondBenignLetter: beyondBenignLetterImg,
+  vcVisitationCircular: vcVisitationCircularImg,
 }
 
 export const university = {
-  name: 'Abdulrasaq Abubakar Toyin University',
+  name: 'AbdulRasaq Abubakar Toyin University',
   shortName: 'AAT University',
   abbreviation: 'AATU',
   motto: 'Advancing Generational Development',
@@ -19,7 +27,7 @@ export const university = {
   email: 'info.aatu@gmail.com',
   website: 'www.aatu.edu.ng',
   socials: [
-    { label: 'Facebook', handle: 'Abdulrasaq Abubakar Toyin University', href: 'https://www.facebook.com/' },
+    { label: 'Facebook', handle: 'AbdulRasaq Abubakar Toyin University', href: 'https://www.facebook.com/' },
     { label: 'Instagram', handle: '@aatu_ng', href: 'https://www.instagram.com/' },
     { label: 'X', handle: '@aatu_ng', href: 'https://x.com/' },
   ],
@@ -271,6 +279,78 @@ export const stats = [
 
 export const news = [
   {
+    slug: 'green-chemistry-commitment',
+    category: 'Academic Development',
+    title: 'AATU signs Beyond Benign Green Chemistry Commitment',
+    date: '2026-09-07',
+    displayDate: '7 September 2026',
+    readTime: '5 min read',
+    image: greenChemistryCertificateImg,
+    imagePosition: 'center',
+    imageFit: 'contain',
+    imageAspect: 'aspect-[4/3]',
+    imageAlt:
+      'Green Chemistry Commitment certificate presented to AbdulRasaq Abubakar Toyin University',
+    imageCaption: 'Certificate of Leadership, Green Chemistry Commitment, awarded 7 September 2026.',
+    excerpt:
+      'The commitment places the University among more than 300 institutions worldwide advancing safer, more sustainable chemistry education.',
+    featured: true,
+    content: [
+      'AbdulRasaq Abubakar Toyin University has signed the Beyond Benign Green Chemistry Commitment, formalising its commitment to preparing scientists and citizens to address sustainability challenges through chemistry.',
+      'The certificate of leadership was awarded on 7 September 2026, following correspondence from Beyond Benign dated 28 August 2026 congratulating the University’s Physical Sciences Department on the milestone.',
+      'AATU now joins more than 300 academic institutions worldwide working to advance green chemistry in higher education and better prepare students to address sustainability through chemistry.',
+      'Beyond Benign noted that the growing demand for sustainable chemical products requires graduates to acquire 21st-century green chemistry competencies that can be applied in laboratories, research institutions and the chemical industry.',
+      'The organisation highlighted the enormous environmental benefits that can result from the application of green chemistry, noting, for instance, that the adoption of a biobased solvent in an industrial setting could potentially achieve a 97 per cent reduction in greenhouse gas emissions.',
+      'Beyond Benign also pointed to projections that the global chemicals market could double between 2017 and 2030, stressing that scientists trained in green chemistry would be critical to achieving sound chemicals management and reducing adverse environmental impacts.',
+      'AATU’s participation in the Green Chemistry Commitment therefore strengthens the University’s contribution to the United Nations Sustainable Development Goals and reinforces its commitment to producing graduates equipped to provide innovative solutions to global challenges.',
+      'The organisation expressed its readiness to continue collaborating with AATU and sharing best practices on the integration of green chemistry into courses and academic programmes.',
+      'In his reaction, the Vice-Chancellor, Professor Olayemi Mikail Olaniyi, said the milestone further demonstrates AATU’s commitment to its vision of developing an excellent academic and research environment that meets world-class standards while advancing generational development, innovation and global citizenship.',
+      'For AATU, the Green Chemistry Commitment is not merely a recognition; it is a declaration of intent to educate a new generation of scientists capable of building a safer, cleaner and more sustainable world.',
+    ],
+    documents: [
+      {
+        src: beyondBenignLetterImg,
+        alt:
+          'Letter from Beyond Benign dated 28 August 2026 congratulating AATU on signing the Green Chemistry Commitment',
+        label: 'Supporting document',
+        title: 'Letter from Beyond Benign',
+        caption:
+          'Correspondence dated 28 August 2026 from Dr Amy Cannon, Executive Director of Beyond Benign, congratulating the University on signing the commitment.',
+      },
+    ],
+  },
+  {
+    slug: 'vice-chancellor-faculty-visitation',
+    category: 'Notice',
+    title: 'Vice-Chancellor schedules visits to faculties, directorates and units',
+    date: '2026-10-19',
+    displayDate: '19 October 2026',
+    readTime: '2 min read',
+    image: campusImg,
+    imagePosition: 'center',
+    excerpt:
+      'The two-day schedule covers the University’s faculties on 20 October and directorates and service units on 21 October 2026.',
+    featured: false,
+    content: [
+      'The Vice-Chancellor, Professor Olayemi Mikail Olaniyi, will visit the University’s faculties, directorates and units on 20 and 21 October 2026, according to a circular issued by the Registrar’s Office.',
+      'The visits begin on 20 October with the Faculty of Arts, Management and Social Sciences (10:00–11:00 a.m.), the Faculty of Architecture and Environmental Sciences (11:00 a.m.–12:00 p.m.) and the Faculty of Science and Computing (12:00–1:00 p.m.).',
+      'On 21 October, the schedule covers the Directorate of Academic Planning, Registry, Bursary, Audit, Library, Student Affairs, Bookshop, Water Production, Clinic, Security, Cleaners, Hostels, CBT, ICT and University Relations. The visits begin at 10:00 a.m. and conclude at 2:15 p.m.',
+      'Deans, directors and heads of departments and units have been notified of the schedule through the circular, referenced AATU/RO/062 and dated 19 October 2026.',
+      'The circular was issued by the Registrar, Emmanuel Dada Obafemi. The full itinerary is reproduced in the official circular below.',
+    ],
+    documents: [
+      {
+        src: vcVisitationCircularImg,
+        alt:
+          'Internal memorandum dated 19 October 2026 outlining the Vice-Chancellor’s visitation schedule',
+        label: 'Official circular',
+        title: 'Vice-Chancellor’s visitation schedule',
+        caption:
+          'Circular AATU/RO/062, dated 19 October 2026, issued by the Registrar, Emmanuel Dada Obafemi.',
+      },
+    ],
+  },
+  {
     slug: 'vice-chancellor-appointment',
     category: 'University News',
     title: 'Professor Olayemi Mikail Olaniyi appointed first substantive Vice-Chancellor',
@@ -283,10 +363,10 @@ export const news = [
       'The appointment takes effect from 4 September 2026 and marks a new chapter in the university’s academic development.',
     featured: true,
     content: [
-      'Abdulrasaq Abubakar Toyin University has announced the appointment of Professor Olayemi Mikail Olaniyi as its first substantive Vice-Chancellor, effective from 4 September 2026.',
+      'AbdulRasaq Abubakar Toyin University has announced the appointment of Professor Olayemi Mikail Olaniyi as its first substantive Vice-Chancellor, effective from 4 September 2026.',
       'The Vice-Chancellor leads the academic and administrative affairs of the university and works with the Governing Council to advance the institution’s mission, academic standards and long-term development.',
       'The university community is invited to follow official channels for further information on the leadership and academic direction of the institution.',
-      'A full official profile, including academic qualifications and institutional responsibilities, will be published once confirmed by the university.',
+      'His full profile, including academic qualifications, research record and institutional responsibilities, is available on the Leadership page.',
     ],
   },
   {
@@ -321,7 +401,7 @@ export const news = [
       'The newly approved programmes expand AATU’s academic portfolio across law, health sciences, computing and the social sciences.',
     featured: false,
     content: [
-      'Public reporting in June 2026 announced the approval of 15 additional undergraduate programmes at Abdulrasaq Abubakar Toyin University, with commencement approved for the 2026/2027 academic session.',
+      'Public reporting in June 2026 announced the approval of 15 additional undergraduate programmes at AbdulRasaq Abubakar Toyin University, with commencement approved for the 2026/2027 academic session.',
       'The reported programmes include Common Law, Common and Islamic Law, Nursing Science, Medical Laboratory Science, Chemistry, Medical Physics, Industrial Chemistry, Public Health, Political Science, Public Administration, Artificial Intelligence, Community Health, Intelligence and Security Studies, Microbiology and Mass Communication.',
       'The approvals build on the university’s initial academic offering and broaden opportunities for students across the sciences, health, law, computing and social sciences.',
       'Programme availability is subject to the university’s official admission process. Prospective candidates should confirm current admission status with the Admissions Office before applying.',
@@ -359,7 +439,7 @@ export const news = [
       'Teaching spaces, library resources, laboratories and computing facilities have been developed to support the university’s academic programmes.',
     featured: false,
     content: [
-      'Ahead of its academic take-off, Abdulrasaq Abubakar Toyin University has developed core facilities to support teaching, learning and research.',
+      'Ahead of its academic take-off, AbdulRasaq Abubakar Toyin University has developed core facilities to support teaching, learning and research.',
       'Public reporting has described the development of academic facilities, library resources, laboratories and computing facilities on the university’s campus in Oke-Ogba, Ganmo, Ilorin, Kwara State.',
       'The campus environment is designed to provide students with a focused setting for study and academic engagement.',
       'Further information on facilities and student services will be published as it is confirmed by the university.',
@@ -421,7 +501,7 @@ export const admissionSteps = [
     step: '02',
     title: 'Select AAT University through JAMB',
     description:
-      'UTME and Direct Entry candidates should indicate Abdulrasaq Abubakar Toyin University as their institution of choice through the appropriate JAMB process.',
+      'UTME and Direct Entry candidates should indicate AbdulRasaq Abubakar Toyin University as their institution of choice through the appropriate JAMB process.',
   },
   {
     step: '03',
@@ -473,13 +553,203 @@ export const admissionFaqs = [
 export const leadership = {
   viceChancellor: {
     name: 'Professor Olayemi Mikail Olaniyi',
+    shortName: 'Professor Olaniyi',
     role: 'Vice-Chancellor',
-    effective: 'Effective 4 September 2026',
+    title: 'First Substantive Vice-Chancellor',
+    institution: 'AbdulRasaq Abubakar Toyin University (AATU)',
+    campus: 'Ganmo, Kwara State, Nigeria',
+    effective: 'Appointed 4 September 2026',
+    appointmentDate: '2026-09-04',
+    birthDate: '1979-09-14',
+    birthPlace: 'Ibadan, Oyo State, Nigeria',
+    nationality: 'Nigerian',
     initials: 'OO',
+    image: vcImg,
+    imagePosition: 'center top',
+    summary:
+      'A Professor of Computer Engineering and former Dean of the Faculty of Computing at the National Open University of Nigeria, Professor Olaniyi brings two decades of academic distinction, research leadership and institutional experience to AATU.',
     bio: [
-      'Professor Olayemi Mikail Olaniyi serves as the first substantive Vice-Chancellor of Abdulrasaq Abubakar Toyin University.',
-      'As Vice-Chancellor, he provides academic and administrative leadership for the university, working with the Governing Council and principal officers to advance teaching, research and institutional development.',
-      'A full official profile will be published when confirmed by the university.',
+      'Professor Olayemi Mikail Olaniyi is a Professor of Computer Engineering and the first substantive Vice-Chancellor of AbdulRasaq Abubakar Toyin University (AATU), Ganmo, Kwara State. He was appointed to the office in September 2026.',
+      'A former Dean of the Faculty of Computing at the National Open University of Nigeria (NOUN), he brings to the office two decades of academic distinction across Computer Security, Intelligent and Embedded Systems, Applied Medical Informatics, and Open and Distance Learning, together with extensive institutional and administrative experience.',
+    ],
+    stats: [
+      { value: '20+', label: 'Years in academia' },
+      { value: '195+', label: 'Publications' },
+      { value: '₦350m+', label: 'Research grants secured' },
+      { value: '1,844', label: 'Google Scholar citations' },
+    ],
+    quickFacts: [
+      { label: 'Full name', value: 'Olayemi Mikail Olaniyi' },
+      { label: 'Date of birth', value: '14 September 1979' },
+      { label: 'Age', value: '47 years (2026)' },
+      { label: 'Place of birth', value: 'Ibadan, Oyo State, Nigeria' },
+      { label: 'Nationality', value: 'Nigerian' },
+      { label: 'Profession', value: 'Academic and Engineer' },
+      { label: 'Current position', value: 'Vice-Chancellor, AATU' },
+      { label: 'Previous role', value: 'Dean, Faculty of Computing, NOUN' },
+      { label: 'Appointment', value: '4 September 2026' },
+      { label: 'Marital status', value: 'Married' },
+    ],
+    specialisations: [
+      'Computer Security',
+      'Intelligent and Embedded Systems',
+      'Applied Medical Informatics',
+      'Open and Distance Learning',
+    ],
+    memberships: [
+      'Nigerian Computer Society (NCS)',
+      'Institute of Electrical and Electronics Engineers (IEEE)',
+      'Association for Computing Machinery (ACM)',
+      'International Association of Engineers (IAENG)',
+      'Institute of Research Engineers and Doctors (IRED)',
+      'Cyber Security Experts Association of Nigeria (CSEAN)',
+      'National Institute of Professional Engineers and Scientists (NIPES)',
+      'Registered Computer Engineer, Council for the Regulation of Engineering in Nigeria (COREN)',
+    ],
+    education: [
+      {
+        year: '1999',
+        qualification: 'National Diploma in Computer Technology',
+        institution: 'Federal Polytechnic, Offa, Kwara State',
+        note: 'Upper Credit',
+      },
+      {
+        year: '2005',
+        qualification: 'B.Tech in Computer Engineering',
+        institution: 'Ladoke Akintola University of Technology (LAUTECH), Ogbomoso',
+      },
+      {
+        year: '2011',
+        qualification: 'M.Sc. in Electronic and Computer Engineering',
+        institution: 'Lagos State University (LASU), Ojo, Lagos',
+        note: 'Distinction',
+      },
+      {
+        year: '2015',
+        qualification: 'Ph.D. in Computer Science and Engineering',
+        institution: 'Ladoke Akintola University of Technology (LAUTECH), Ogbomoso',
+        note: 'Specialisation: Computer Security',
+      },
+    ],
+    career: [
+      {
+        period: '2007',
+        role: 'Graduate Assistant',
+        organisation: 'Bells University of Technology, Ota, Ogun State',
+        detail:
+          'Began his academic career in the Department of Computer Science, and later in Electrical and Electronics Engineering.',
+      },
+      {
+        period: '2021',
+        role: 'Professor of Computer Engineering',
+        organisation: 'Federal University of Technology, Minna (FUTMINNA)',
+        detail:
+          'Rose through the academic ranks to a professorship in the Department of Computer Engineering.',
+      },
+      {
+        period: 'Aug 2025 – Sept 2026',
+        role: 'Dean, Faculty of Computing',
+        organisation: 'National Open University of Nigeria (NOUN), Abuja',
+        detail:
+          'Provided academic and administrative leadership for the Faculty of Computing.',
+      },
+      {
+        period: '4 Sept 2026',
+        role: 'Vice-Chancellor',
+        organisation: 'AbdulRasaq Abubakar Toyin University (AATU)',
+        detail:
+          'Appointed the university’s first substantive Vice-Chancellor.',
+      },
+    ],
+    administrativeRoles: [
+      {
+        period: 'Aug 2025 – Sept 2026',
+        role: 'Dean, Faculty of Computing',
+        organisation: 'National Open University of Nigeria (NOUN), Abuja',
+      },
+      {
+        period: 'Mar 2026 – Sept 2026',
+        role: 'Chairman, Ad-hoc Committee on Cybersecurity Capacity Building',
+        organisation: 'NOUN IT Board',
+      },
+      {
+        period: '2024 – 2025',
+        role: 'Head of Department, Cybersecurity',
+        organisation: 'Faculty of Computing, NOUN, Abuja',
+      },
+      {
+        period: 'Apr 2024 – Jan 2025',
+        role: 'Chairman, Postgraduate Committee',
+        organisation: 'Faculty of Computing, NOUN, Abuja',
+      },
+      {
+        period: 'May 2021 – Oct 2023',
+        role: 'Deputy Dean, School of Electrical and Electronics Engineering',
+        organisation: 'FUTMINNA, Niger State',
+      },
+      {
+        period: 'May 2021 – Oct 2023',
+        role: 'Chairman, Postgraduate Board',
+        organisation: 'School of Electrical Engineering and Technology (SEET), FUTMINNA',
+      },
+      {
+        period: 'Apr 2023',
+        role: 'Co-Chairman, International Engineering Conference (IEC)',
+        organisation: 'School of Electrical Engineering and Technology, FUTMINNA',
+      },
+      {
+        period: '2016/2017',
+        role: 'Chairman, Information Technology Sub-Committee',
+        organisation: 'School of Engineering and Engineering Technology, IEC',
+      },
+      {
+        period: 'Oct 2012 – Sept 2014',
+        role: 'Head of Department, Computer Engineering',
+        organisation: 'FUTMINNA, Niger State',
+      },
+    ],
+    research: {
+      summary:
+        'Professor Olaniyi has authored or co-authored over 195 publications across national and international book chapters and journals, and has been an active participant at conferences worldwide. He has secured several academic development grants valued at over ₦350 million.',
+      highlight:
+        'His research spans Computer Security, Intelligent and Embedded Systems, Applied Medical Informatics, and Open and Distance Learning.',
+      scholar: {
+        citations: '1,844',
+        hIndex: '21',
+      },
+    },
+    accreditation: [
+      'As Acting Head of the Department of Computer Engineering at FUTMINNA, he led the department to full accreditation by the Council for the Regulation of Engineering in Nigeria (COREN).',
+      'As the pioneer substantive Head of the Department of Cybersecurity at NOUN, he led the department to full accreditation by the National Universities Commission (NUC).',
+      'He has served as chairman and member of NUC accreditation panels across several Nigerian universities.',
+      'He has served as an external examiner for undergraduate programmes in Computing and Engineering, and as an external assessor for the promotion of Associate Professors and Professors at universities in Nigeria and the diaspora.',
+    ],
+    awards: [
+      {
+        title: 'Best Graduating M.Sc. Student',
+        detail:
+          'Department of Electronic and Computer Engineering, Lagos State University, Ojo, Lagos.',
+      },
+      {
+        title: 'Bronze, Silver and Gold Medals',
+        detail:
+          'Coach, National ACM/ICPC Programming Contest, Bells University of Technology, Ota (2009, 2010, 2011).',
+      },
+      {
+        title: 'Award of Commitment and Dedication to Service',
+        detail:
+          'SERVICOM Unit, Federal University of Technology, Minna, Niger State (2014).',
+      },
+      {
+        title: 'Award of Recognition for Research Support',
+        detail:
+          'International Conference on Science, Technology, Education, Arts, Management and Social Sciences (ISTEAMS), SMART Africa / University of Benin (2015).',
+      },
+    ],
+    personalLife: [
+      'Professor Olaniyi advocates discipline, synergy and resilience as essential ingredients for achieving institutional goals.',
+      'He is known for his selflessness, kindness, collaborative spirit and humility, and holds firmly to the belief that determination and commitment make set objectives achievable. He places great value on self-discipline and on mentoring others toward excellence.',
+      'He is married and blessed with children.',
     ],
   },
   offices: [

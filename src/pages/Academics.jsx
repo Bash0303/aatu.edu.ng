@@ -64,7 +64,7 @@ const filters = [
 export default function Academics() {
   usePageMeta(
     'Academics',
-    'Explore the faculties and undergraduate programmes at Abdulrasaq Abubakar Toyin University, including new programmes approved for the 2026/2027 session.',
+    'Explore the faculties and undergraduate programmes at AbdulRasaq Abubakar Toyin University, including new programmes approved for the 2026/2027 session.',
   )
 
   const [activeFilter, setActiveFilter] = useState('all')

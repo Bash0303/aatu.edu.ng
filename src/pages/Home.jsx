@@ -85,7 +85,7 @@ const heroLinks = [
 export default function Home() {
   usePageMeta(
     'Home',
-    'Abdulrasaq Abubakar Toyin University (AATU) — a private not-for-profit university in Oke-Ogba, Ganmo, Ilorin, Kwara State, advancing generational development.',
+    'AbdulRasaq Abubakar Toyin University (AATU) — a private not-for-profit university in Oke-Ogba, Ganmo, Ilorin, Kwara State, advancing generational development.',
   )
 
   const featured = news.find((article) => article.featured) || news[0]
@@ -133,7 +133,7 @@ export default function Home() {
               className="animate-fade-up mt-7 max-w-xl text-[0.95rem] leading-relaxed text-white/70 sm:text-[1.02rem]"
               style={{ animationDelay: '300ms' }}
             >
-              Abdulrasaq Abubakar Toyin University is a private, not-for-profit university in
+              AbdulRasaq Abubakar Toyin University is a private, not-for-profit university in
               Kwara State, educating global citizens through rigorous teaching, research and
               character.
             </p>
@@ -312,7 +312,7 @@ export default function Home() {
             <Reveal delay={140}>
               <div className="mt-6 space-y-4 text-[0.92rem] leading-relaxed text-navy-900/75">
                 <p>
-                  Abdulrasaq Abubakar Toyin University is a private, not-for-profit institution
+                  AbdulRasaq Abubakar Toyin University is a private, not-for-profit institution
                   located in Oke-Ogba, Ganmo, Ilorin, Kwara State. The university was established
                   to broaden access to quality higher education and to develop graduates of
                   character, competence and consequence.
