@@ -5,6 +5,23 @@ import vcImg from '../assets/vc-olaniyi.jpeg'
 import greenChemistryCertificateImg from '../assets/green-chemistry-certificate.jpeg'
 import beyondBenignLetterImg from '../assets/beyond-benign-letter.jpeg'
 import vcVisitationCircularImg from '../assets/vc-visitation-circular.jpeg'
+import auditoriumImg from '../assets/Auditorium .jpeg'
+import libraryImg from '../assets/library .jpeg'
+import backOfClassroomViewImg from '../assets/back of classroom view .jpeg'
+import classroomBuildingImg from '../assets/classroom building .jpeg'
+import partOfSchoolViewImg from '../assets/part of school view .jpeg'
+import schoolStadiumImg from '../assets/school stadium .jpeg'
+import schoolWalkAwayImg from '../assets/school walk away .jpeg'
+import senateBuildingImg from '../assets/senate building .jpeg'
+import studentCentreImg from '../assets/student centre .jpeg'
+import studentReadingSideImg from '../assets/student reading side .jpeg'
+import principalLibrarianImg from '../assets/Principal Librarian.jpeg'
+import artsDeanImg from '../assets/Dean Faculty of Arts and Social Science.jpeg'
+import registrarImg from '../assets/Ag. Pioneer Registrar.jpeg'
+import scienceDeanImg from '../assets/Acting Dean of Faculty of Science and Computing.jpeg'
+import moshoodZakariyahImg from '../assets/Professor Moshood Zakariyah .jpeg'
+import adetolaOladipoImg from '../assets/Dr. Adetola Christianah Oladipo.jpeg'
+import nurudeenBelloImg from '../assets/NURUDEEN AKINSOLA BELLO, Ph.D..jpeg'
 
 export const images = {
   campus: campusImg,
@@ -15,6 +32,69 @@ export const images = {
   beyondBenignLetter: beyondBenignLetterImg,
   vcVisitationCircular: vcVisitationCircularImg,
 }
+
+export const overviewGallery = [
+  {
+    title: 'Auditorium',
+    caption: 'The university auditorium, used for assemblies and academic gatherings.',
+    image: auditoriumImg,
+    position: 'center',
+  },
+  {
+    title: 'Library',
+    caption: 'Library resources and study space supporting independent learning.',
+    image: libraryImg,
+    position: 'center',
+  },
+  {
+    title: 'Classroom view',
+    caption: 'A rear view of one of the university teaching spaces.',
+    image: backOfClassroomViewImg,
+    position: 'center',
+  },
+  {
+    title: 'Classroom building',
+    caption: 'The classroom building that houses teaching and learning.',
+    image: classroomBuildingImg,
+    position: 'center',
+  },
+  {
+    title: 'School view',
+    caption: 'A view across part of the Oke-Ogba campus.',
+    image: partOfSchoolViewImg,
+    position: 'center',
+  },
+  {
+    title: 'School stadium',
+    caption: 'The university stadium and outdoor sports area.',
+    image: schoolStadiumImg,
+    position: 'center',
+  },
+  {
+    title: 'Campus walkway',
+    caption: 'Walkways connecting the academic and administrative areas.',
+    image: schoolWalkAwayImg,
+    position: 'center',
+  },
+  {
+    title: 'Senate building',
+    caption: 'The senate building, at the heart of university governance.',
+    image: senateBuildingImg,
+    position: 'center',
+  },
+  {
+    title: 'Student centre',
+    caption: 'The student centre for social and co-curricular life.',
+    image: studentCentreImg,
+    position: 'center',
+  },
+  {
+    title: 'Student reading area',
+    caption: 'A quiet reading area where students study and revise.',
+    image: studentReadingSideImg,
+    position: 'center',
+  },
+]
 
 export const university = {
   name: 'AbdulRasaq Abubakar Toyin University',
@@ -787,6 +867,90 @@ export const leadership = {
     },
   ],
 }
+
+export const leadershipProfiles = [
+  {
+    name: 'Dr Comfort Olushola Adeniran',
+    role: 'Principal Librarian',
+    image: principalLibrarianImg,
+    imagePosition: 'center top',
+    bio: [
+      'Dr Comfort Olushola Adeniran was born in Zaria, Kaduna State. She holds a Bachelor of Library and Information Science from Ahmadu Bello University, Zaria (2001), a Master of Public Administration from the University of Ilorin (2004), a Master of Library and Information Science from Ahmadu Bello University, Zaria (2013) and a Ph.D. in Library and Information Science from the University of Ilorin (2024).',
+      'She is a member of several professional bodies, including the Nigerian Library Association (NLA) and the Chartered Librarians of Nigeria, Kwara State chapter. She is happily married with four children.',
+    ],
+  },
+  {
+    name: 'Professor Olugbenga Ebenezer Olatunji',
+    role: 'Dean, Faculty of Arts and Social Sciences',
+    image: artsDeanImg,
+    imagePosition: 'center top',
+    bio: [
+      'Professor Olugbenga Ebenezer Olatunji was born on 12 January 1966. He obtained a B.Sc. (Hons) in Political Science with Second Class Upper from Ondo State University, Ado Ekiti in 1991, an M.Sc. in Political Science from the University of Lagos in 1998 and a Ph.D. in Political Science from the same university in 2011.',
+      'He is an experienced lecturer, an external examiner in seven universities across the country and an astute administrator who has held several positions, including coordinator, Head of Department and chairman of the NUC Accreditation Committee, with several engagements at the National Universities Commission.',
+      'Professor Olatunji is happily married with children and has supervised many M.Sc. dissertations and Ph.D. theses.',
+    ],
+  },
+  {
+    name: 'Mr Emmanuel Dada Obafemi',
+    role: 'Ag. Pioneer Registrar',
+    image: registrarImg,
+    imagePosition: 'center top',
+    bio: [
+      'Mr Emmanuel Dada Obafemi was born on 29 November 1953 in Kabba, in the present Kogi State. He had his primary education at Saint Andrews Primary School, Kabba, between 1959 and 1966, and his secondary education at the Government College, Keffi, between 1967 and 1971. He attended the University of Ibadan from 1974 to 1977, the National Institute of Public Information, Kaduna, in 1981, the Administrative Staff College of Nigeria (ASCON), Badagry, Lagos, in 1995 and the Digital Bridge Institute, Abuja, in 2010.',
+      'He is a member of many reputable professional bodies, including the Nigerian Institute of Public Relations, the Association of Nigerian University Professional Administrators (ANUPA), the Association of University Administrators (UK) and the West African Society for Community and Administration (Fellow).',
+      'Mr Obafemi began his career as an Information Officer in the Kwara State Civil Service and joined the University of Ilorin in 1981 as Assistant Registrar (Information). He rose to Registrar of Salam University, Lokoja, from 1 April 2008 to 28 February 2009, and was Registrar of the University of Ilorin from April 2013 to April 2018, retiring in November 2018.',
+      'In February 2021, he was appointed Senior Special Assistant to the Vice-Chancellor of the Federal University, Lokoja, a position he held until his appointment as the pioneer acting Registrar of AAT University in April 2025.',
+      'His extra-curricular activities include football refereeing and reading. He has served as a CAF Instructor/Assessor, FIFA Instructor/Assessor and NFF Instructor/Assessor.',
+    ],
+  },
+  {
+    name: 'Professor Usman Lamidi Ajao',
+    role: 'Acting Dean, Faculty of Science and Computing',
+    image: scienceDeanImg,
+    imagePosition: 'center top',
+    bio: [
+      'Professor Usman Lamidi Ajao is the acting Dean of the Faculty of Science and Computing. He is an accomplished academic and administrator with over twenty years of teaching, research and university leadership.',
+      'He holds a Bachelor of Chemistry and Education, a Master of Chemistry and a Ph.D. in Pure and Applied Organic Chemistry. He has served in key leadership positions at the University of Ilorin, including Head of the Department of Chemistry and Director of the University of Ilorin JUPEB Foundation School, and as a member of the 9th University of Ilorin Teaching Hospital Management Board.',
+      'His research focuses on the characterisation and evaluation of the therapeutic and insecticidal potentials of essential oils from Nigerian plants, with numerous publications in reputable journals. He has supervised several Bachelor, Master and Ph.D. students and is a member of recognised professional bodies, including the Chemical Society of Nigeria, the American Chemical Society and the Society of Essential Oils Distillers and Analysts of Nigeria.',
+      'He is committed to mentorship, academic excellence, research advancement and effective faculty leadership in line with global best practices.',
+    ],
+  },
+  {
+    name: 'Professor Moshood Zakariyah',
+    role: 'Professor of English Language',
+    image: moshoodZakariyahImg,
+    imagePosition: 'center top',
+    bio: [
+      'Professor Moshood Zakariyah holds a B.A. in English Language (Second Class Upper) from Usmanu Danfodiyo University, Sokoto (2001), an M.A. in English Language from the University of Ilorin (2008) and a Ph.D. in English Language from Ahmadu Bello University, Zaria (2016).',
+      'He began his academic career at the Department of English and Communication, Kwara State Polytechnic, Ilorin, where he served from 2005 to 2009. In October 2009, he joined Kwara State University (KWASU), Malete, as one of its pioneer lecturers.',
+      'Through years of dedication to teaching, research and community service, he attained the rank of Professor of English Language, with a bias for sociolinguistics and applied linguistics.',
+    ],
+  },
+  {
+    name: 'Dr Adetola Christianah Oladipo',
+    role: 'Acting Dean, Student Affairs',
+    image: adetolaOladipoImg,
+    imagePosition: 'center top',
+    bio: [
+      'Dr Adetola Christianah Oladipo is a Senior Lecturer in the Department of Biochemistry at AbdulRasaq Abubakar Toyin University, with a specialisation in inorganic and materials chemistry. She holds a Ph.D. in Chemistry from the University of Ilorin and is an Associate Member of the Royal Society of Chemistry (UK).',
+      'She has extensive teaching and research experience at both undergraduate and postgraduate levels and has published widely in reputable international journals. She has received several competitive research grants and fellowships to developed countries, including the United Kingdom, Spain, Germany and Italy.',
+      'She has served in several academic and administrative roles, contributing actively to research development, student mentorship and community engagement. She is currently the Acting Dean, Student Affairs.',
+    ],
+  },
+  {
+    name: 'Nurudeen Akinsola Bello, Ph.D.',
+    role: 'Pioneer Dean, Faculty of Architecture and Environmental Sciences',
+    image: nurudeenBelloImg,
+    imagePosition: 'center top',
+    bio: [
+      'Nurudeen Akinsola Bello is the first Professor of Estate Management in the Faculty of Environmental Sciences at the University of Ilorin. He holds a Ph.D. (2018), M.Sc. (2012) and B.Sc. (1996) in Estate Management from Obafemi Awolowo University, Ile-Ife, an M.Sc. in Housing Development and Management from the University of Ibadan (2007) and a National Diploma in Urban and Regional Planning from The Polytechnic, Ibadan (1990).',
+      'He has over two decades of experience in practice, academic research and teaching in estate management, spanning Jide Taiwo & Co, Kano Branch, Moshood Abiola Polytechnic, Abeokuta, and the University of Ilorin. At Jide Taiwo & Co, he served as Deputy Manager (1999-2002); at the Polytechnic, he was Head of the Estate Management and Valuation Department (2008-2013). At the University of Ilorin, he was a two-time acting Head of the Estate Management Department (2015-2020) and immediate past acting Dean of the Faculty of Environmental Sciences (2022-2024).',
+      'He is currently the pioneer Dean, Faculty of Architecture and Environmental Sciences, AbdulRasaq Abubakar Toyin University, Oke-Ogba, Ganmo, Kwara State. He has been an external examiner for the Estate Management Departments of The Polytechnic, Ibadan, and Kwara State Polytechnic, Ilorin, and participated as an NBTE resource person for the accreditation of estate management programmes.',
+      'He is a book author and an active researcher in special housing and real estate investment appraisal, with multiple published articles and conference presentations. He is a professional member (2001) of the Nigerian Institution of Estate Surveyors and Valuers (NIESV), a registered Estate Surveyor and Valuer (2003) with ESVARBON and a certified member of the Association of Cyber Security Professionals (ACSP).',
+      'At NIESV National, Professor Bello was Secretary of the National Electoral Committee (2016-2018), a member of the National Education Committee, Chief Invigilator and member of the Board of Examiners (2020-2022), a member of the Editorial Board of the Estate Surveyor and Valuer journal (2013-2017), rapporteur at the 3rd Housing Summit (2014) and chief rapporteur for the 46th Annual Conference (UNITY 2016).',
+    ],
+  },
+]
 
 export const gallery = [
   {

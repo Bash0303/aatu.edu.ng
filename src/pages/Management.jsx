@@ -27,7 +27,7 @@ import {
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import usePageMeta from '../hooks/usePageMeta'
-import { leadership, university } from '../data/site'
+import { leadership, leadershipProfiles, university } from '../data/site'
 
 const officeIcons = [FileText, Wallet, Library]
 const governanceIcons = [Landmark, Users, BookOpenCheck]
@@ -577,6 +577,52 @@ export default function Management() {
               Leadership profiles are published only after official confirmation by the university.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-paper py-20 sm:py-24">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="Faculty deans & principal officers"
+            title="The people leading our faculties and offices."
+            description="Meet the deans, professors and principal officers who guide academic life and institutional services at AAT University."
+          />
+
+          <div className="mt-12 columns-1 gap-5 md:columns-2">
+            {leadershipProfiles.map((profile, index) => (
+              <Reveal
+                key={profile.name}
+                delay={(index % 2) * 80}
+                className="mb-5 break-inside-avoid"
+              >
+                <article className="overflow-hidden rounded-2xl border border-navy-950/10 bg-white">
+                  <div className="relative">
+                    <img
+                      src={profile.image}
+                      alt={`Portrait of ${profile.name}, ${profile.role} at AAT University`}
+                      loading="lazy"
+                      style={{ objectPosition: profile.imagePosition }}
+                      className="aspect-[5/4] w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-transparent" aria-hidden="true" />
+                  </div>
+                  <div className="p-6 sm:p-7">
+                    <p className="text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-crest-700">
+                      {profile.role}
+                    </p>
+                    <h3 className="mt-2 font-display text-[1.45rem] leading-tight text-navy-950">
+                      {profile.name}
+                    </h3>
+                    <div className="mt-3 space-y-3 text-[0.8rem] leading-relaxed text-navy-900/70">
+                      {profile.bio.map((paragraph) => (
+                        <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

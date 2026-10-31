@@ -16,7 +16,7 @@ import PageHeader from '../components/PageHeader'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import usePageMeta from '../hooks/usePageMeta'
-import { images, university } from '../data/site'
+import { images, overviewGallery, university } from '../data/site'
 
 const principles = [
   {
@@ -176,6 +176,41 @@ export default function About() {
               </div>
             </div>
           </Reveal>
+        </div>
+
+        <div className="container-page mt-14 sm:mt-16">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:auto-rows-[12rem] lg:grid-cols-4">
+            {overviewGallery.map((item, index) => (
+              <Reveal
+                key={item.title}
+                delay={(index % 4) * 60}
+                className={index === 0 ? 'col-span-2 lg:row-span-2' : ''}
+              >
+                <figure
+                  className={`group relative h-full overflow-hidden rounded-xl bg-navy-100 sm:rounded-2xl ${
+                    index === 0 ? 'aspect-[16/10] lg:aspect-auto' : 'aspect-[4/3] lg:aspect-auto'
+                  }`}
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    style={{ objectPosition: item.position }}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.3s] ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/10 to-transparent opacity-85 transition-opacity duration-500 group-hover:opacity-100" />
+                  <figcaption className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                    <span className="block text-[0.78rem] font-semibold text-white transition-colors group-hover:text-gold-200">
+                      {item.title}
+                    </span>
+                    <span className="mt-0.5 hidden text-[0.7rem] leading-relaxed text-white/55 sm:block">
+                      {item.caption}
+                    </span>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
