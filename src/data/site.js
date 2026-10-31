@@ -359,6 +359,24 @@ export const stats = [
 
 export const news = [
   {
+    slug: 'notice-to-all-fresh-students',
+    category: 'Notice',
+    title: 'NOTICE TO ALL FRESH STUDENTS',
+    date: '2026-10-30',
+    displayDate: '30 October 2026',
+    readTime: '1 min read',
+    image: campusImg,
+    imagePosition: 'center',
+    excerpt:
+      'Academic activities resume on Friday, 30 October 2026, while clearance activities begin on Monday, 2 November 2026.',
+    featured: true,
+    content: [
+      'This is to inform all newly admitted students of AbdulRasaq Abubakar Toyin University (AATU) that academic activities will resume on Friday, 30 October 2026.',
+      'All clearance activities will start on Monday, 2 November 2026.',
+      'All fresh students are advised to take note and prepare accordingly.',
+    ],
+  },
+  {
     slug: 'green-chemistry-commitment',
     category: 'Academic Development',
     title: 'AATU signs Beyond Benign Green Chemistry Commitment',
@@ -996,6 +1014,13 @@ export const gallery = [
     position: '20% 20%',
     span: 'wide',
   },
+  ...overviewGallery.map((item) => ({
+    title: item.title,
+    caption: item.caption,
+    image: item.image,
+    position: item.position,
+    span: '',
+  })),
 ]
 
 export const campuses = [
