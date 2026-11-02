@@ -24,6 +24,7 @@ import {
   admissionFaqs,
   admissionRequirements,
   admissionSteps,
+  dressCodeFlyers,
   faculties,
   images,
   newProgrammes,
@@ -43,6 +44,7 @@ export default function Admissions() {
   )
 
   const [flierOpen, setFlierOpen] = useState(false)
+  const [dressOpen, setDressOpen] = useState(null)
   const [openFaq, setOpenFaq] = useState(0)
   const closeButtonRef = useRef(null)
 
@@ -63,6 +65,23 @@ export default function Admissions() {
       window.removeEventListener('keydown', onKey)
     }
   }, [flierOpen])
+
+  useEffect(() => {
+    if (dressOpen === null) return undefined
+
+    const onKey = (event) => {
+      if (event.key === 'Escape') setDressOpen(null)
+    }
+
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', onKey)
+
+    return () => {
+      document.body.style.overflow = previous
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [dressOpen])
 
   return (
     <>
@@ -346,6 +365,59 @@ export default function Admissions() {
         </div>
       </section>
 
+      <section id="dress-code" className="scroll-mt-24 border-t border-navy-950/10 bg-white py-20 sm:py-24">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="Dress code"
+            title="Dress and appearance guidelines."
+            description="The university expects all students to dress decently and maintain a neat appearance. Review the approved dress and hairstyle guidelines below."
+          />
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {dressCodeFlyers.map((flyer, index) => (
+              <Reveal key={flyer.title} delay={(index % 3) * 80}>
+                <button
+                  type="button"
+                  onClick={() => setDressOpen(index)}
+                  className="group relative block w-full overflow-hidden rounded-2xl border border-navy-950/10 bg-paper text-left"
+                  aria-label={`View ${flyer.title}`}
+                >
+                  <img
+                    src={flyer.image}
+                    alt={flyer.title}
+                    loading="lazy"
+                    className="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <span className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/10 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" aria-hidden="true" />
+                  <span className="absolute right-4 top-4 grid size-8 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition-colors duration-300 group-hover:bg-crest-600">
+                    <Maximize2 className="size-3.5" aria-hidden="true" />
+                  </span>
+                  <span className="absolute inset-x-0 bottom-0 p-5">
+                    <span className="block text-[0.56rem] font-semibold uppercase tracking-[0.16em] text-gold-300">
+                      Official flyer
+                    </span>
+                    <span className="mt-1 block text-[0.85rem] font-semibold text-white">
+                      {flyer.title}
+                    </span>
+                    <span className="mt-1 hidden text-[0.7rem] leading-relaxed text-white/55 sm:block">
+                      {flyer.caption}
+                    </span>
+                  </span>
+                </button>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={120}>
+            <p className="mt-8 text-[0.72rem] leading-relaxed text-navy-900/55">
+              Approved by University Management, January 2026. Every student must hang their
+              student ID card on the neck. Penalties are set out in the Students Information and
+              Regulation Handbook.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       <section id="faqs" className="scroll-mt-24 border-t border-navy-950/10 bg-paper py-20 sm:py-24 lg:py-28">
         <div className="container-page grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
@@ -477,6 +549,38 @@ export default function Admissions() {
               alt="AAT University admission requirements and full-time degree programmes"
               className="h-auto w-full"
             />
+          </div>
+        </div>
+      )}
+
+      {dressOpen !== null && (
+        <div
+          className="fixed inset-0 z-[90] flex items-center justify-center bg-navy-950/90 p-4 backdrop-blur-sm sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label={dressCodeFlyers[dressOpen].title}
+          onClick={() => setDressOpen(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setDressOpen(null)}
+            className="absolute right-4 top-4 z-10 grid size-11 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/20 transition-colors hover:bg-white hover:text-navy-950 sm:right-8 sm:top-8"
+            aria-label="Close dress code flyer"
+          >
+            <X className="size-5" aria-hidden="true" />
+          </button>
+          <div
+            className="max-h-full max-w-3xl overflow-auto rounded-xl bg-white shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <img
+              src={dressCodeFlyers[dressOpen].image}
+              alt={dressCodeFlyers[dressOpen].title}
+              className="h-auto w-full"
+            />
+            <p className="border-t border-navy-950/10 px-5 py-4 text-[0.8rem] leading-relaxed text-navy-900/70">
+              {dressCodeFlyers[dressOpen].caption}
+            </p>
           </div>
         </div>
       )}

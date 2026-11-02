@@ -1,7 +1,7 @@
 import campusImg from '../assets/aatu campus.jpg'
 import logoImg from '../assets/aatu logo.jpg'
 import flierImg from '../assets/AATU-729x1024.jpg'
-import vcImg from '../assets/vc-olaniyi.jpeg'
+import vcImg from '../assets/VC mew picture .jpeg'
 import greenChemistryCertificateImg from '../assets/green-chemistry-certificate.jpeg'
 import beyondBenignLetterImg from '../assets/beyond-benign-letter.jpeg'
 import vcVisitationCircularImg from '../assets/vc-visitation-circular.jpeg'
@@ -22,6 +22,16 @@ import scienceDeanImg from '../assets/Acting Dean of Faculty of Science and Comp
 import moshoodZakariyahImg from '../assets/Professor Moshood Zakariyah .jpeg'
 import adetolaOladipoImg from '../assets/Dr. Adetola Christianah Oladipo.jpeg'
 import nurudeenBelloImg from '../assets/NURUDEEN AKINSOLA BELLO, Ph.D..jpeg'
+import computerLabImg from '../assets/computer lab.jpeg'
+import computerLab2Img from '../assets/computer lab 2.jpeg'
+import nursingLab1Img from '../assets/nursing lab 1 .jpeg'
+import nursingLab2Img from '../assets/nursing lab 2.jpeg'
+import nursingLab3Img from '../assets/nursing lab 3.jpeg'
+import dressCode1Img from '../assets/dress code 1.jpeg'
+import dressCode2Img from '../assets/dress ccode 2.jpeg'
+import dressCode3Img from '../assets/dress code  3.jpeg'
+import dressCode4Img from '../assets/dress code 4.jpeg'
+import dressCode5Img from '../assets/dress code 5.jpeg'
 
 export const images = {
   campus: campusImg,
@@ -96,6 +106,34 @@ export const overviewGallery = [
   },
 ]
 
+export const dressCodeFlyers = [
+  {
+    title: 'Dress code guidelines',
+    caption: 'General dress code and hair guidelines for male and female students.',
+    image: dressCode1Img,
+  },
+  {
+    title: 'Acceptable modes of dressing',
+    caption: 'Approved examples of smart, modest dressing on campus.',
+    image: dressCode2Img,
+  },
+  {
+    title: 'Unacceptable modes of dressing',
+    caption: 'Examples of dressing, hairstyles and make-up that are not permitted.',
+    image: dressCode3Img,
+  },
+  {
+    title: 'Unacceptable wears',
+    caption: 'Clothing and appearance that constitute inappropriate dressing.',
+    image: dressCode4Img,
+  },
+  {
+    title: 'Dress code guidelines (full text)',
+    caption: 'Full text of the dress code, including the student ID card requirement.',
+    image: dressCode5Img,
+  },
+]
+
 export const university = {
   name: 'AbdulRasaq Abubakar Toyin University',
   shortName: 'AAT University',
@@ -139,6 +177,7 @@ export const navigation = [
     children: [
       { label: 'Entry Requirements', to: '/admissions#requirements' },
       { label: 'How to Apply', to: '/admissions#apply' },
+      { label: 'Dress Code', to: '/admissions#dress-code' },
       { label: 'Admission FAQs', to: '/admissions#faqs' },
     ],
   },
@@ -1021,6 +1060,41 @@ export const gallery = [
     position: item.position,
     span: '',
   })),
+  {
+    title: 'Computer lab',
+    caption: 'Computing facilities supporting digital and technology-based programmes.',
+    image: computerLabImg,
+    position: 'center',
+    span: '',
+  },
+  {
+    title: 'Computer lab (second view)',
+    caption: 'Workstations prepared for practical computing sessions.',
+    image: computerLab2Img,
+    position: 'center',
+    span: '',
+  },
+  {
+    title: 'Nursing lab',
+    caption: 'Clinical skills laboratory supporting nursing education.',
+    image: nursingLab1Img,
+    position: 'center',
+    span: '',
+  },
+  {
+    title: 'Nursing lab (second view)',
+    caption: 'Practical training facilities for nursing students.',
+    image: nursingLab2Img,
+    position: 'center',
+    span: '',
+  },
+  {
+    title: 'Nursing lab (third view)',
+    caption: 'Simulation and skills practice space for the health sciences.',
+    image: nursingLab3Img,
+    position: 'center',
+    span: '',
+  },
 ]
 
 export const campuses = [
