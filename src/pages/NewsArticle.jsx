@@ -7,6 +7,7 @@ import {
   CalendarDays,
   Check,
   Clock,
+  Download,
   FileText,
   Link2,
   Mail,
@@ -164,6 +165,54 @@ export default function NewsArticle() {
                   )}
                 </div>
               </Reveal>
+
+              {article.pdf && (
+                <Reveal delay={80}>
+                  <div className="mt-10 overflow-hidden rounded-2xl border border-navy-950/10 bg-paper">
+                    <div className="flex flex-col items-start gap-4 p-5 sm:flex-row sm:p-6">
+                      <span className="grid size-10 shrink-0 place-items-center rounded-full bg-navy-950 text-white">
+                        <FileText className="size-4" aria-hidden="true" />
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-crest-700">
+                          Official notice · PDF
+                        </p>
+                        <p className="mt-1 font-display text-[1.3rem] leading-tight text-navy-950">
+                          {article.pdf.title}
+                        </p>
+                        <p className="mt-2 text-[0.78rem] leading-relaxed text-navy-900/65">
+                          {article.pdf.caption}
+                        </p>
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          <a
+                            href={article.pdf.src}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn btn-primary"
+                          >
+                            Read notice
+                            <ArrowUpRight className="size-4" aria-hidden="true" />
+                          </a>
+                          <a
+                            href={article.pdf.src}
+                            download="AATU-Resumption-Protocol-Fresh-Students.pdf"
+                            className="btn btn-outline"
+                          >
+                            Download PDF
+                            <Download className="size-4" aria-hidden="true" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <iframe
+                      src={`${article.pdf.src}#view=FitH`}
+                      title={article.pdf.title}
+                      loading="lazy"
+                      className="block h-[70vh] w-full border-t border-navy-950/10 bg-white"
+                    />
+                  </div>
+                </Reveal>
+              )}
 
               {article.documents?.length > 0 && (
                 <Reveal delay={80}>

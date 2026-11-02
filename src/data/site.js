@@ -5,6 +5,7 @@ import vcImg from '../assets/VC mew picture .jpeg'
 import greenChemistryCertificateImg from '../assets/green-chemistry-certificate.jpeg'
 import beyondBenignLetterImg from '../assets/beyond-benign-letter.jpeg'
 import vcVisitationCircularImg from '../assets/vc-visitation-circular.jpeg'
+import newFresherFlyerImg from '../assets/NEW FRESHER FLYER .jpeg'
 import auditoriumImg from '../assets/Auditorium .jpeg'
 import libraryImg from '../assets/library .jpeg'
 import backOfClassroomViewImg from '../assets/back of classroom view .jpeg'
@@ -41,6 +42,7 @@ export const images = {
   greenChemistryCertificate: greenChemistryCertificateImg,
   beyondBenignLetter: beyondBenignLetterImg,
   vcVisitationCircular: vcVisitationCircularImg,
+  newFresherFlyer: newFresherFlyerImg,
 }
 
 export const overviewGallery = [
@@ -177,6 +179,7 @@ export const navigation = [
     children: [
       { label: 'Entry Requirements', to: '/admissions#requirements' },
       { label: 'How to Apply', to: '/admissions#apply' },
+      { label: "Freshers' Resumption", to: '/admissions#freshers' },
       { label: 'Dress Code', to: '/admissions#dress-code' },
       { label: 'Admission FAQs', to: '/admissions#faqs' },
     ],
@@ -403,16 +406,27 @@ export const news = [
     title: 'NOTICE TO ALL FRESH STUDENTS',
     date: '2026-10-30',
     displayDate: '30 October 2026',
-    readTime: '1 min read',
-    image: campusImg,
-    imagePosition: 'center',
+    readTime: '3 min read',
+    image: newFresherFlyerImg,
+    imagePosition: 'center top',
+    imageFit: 'contain',
+    imageAlt: 'Welcome to AATU, Freshers flyer for the 2026/2027 academic session',
+    imageCaption: 'Official welcome flyer from the Office of the Dean, Student Affairs.',
+    pdf: {
+      src: '/notices/resumption-protocol-fresh-students.pdf',
+      title: 'Resumption protocol for fresh students',
+      caption:
+        'Internal memo from the Office of the Dean, Student Affairs, covering the six-step resumption and registration process, hostel rules and important information for all fresh students.',
+    },
     excerpt:
-      'Academic activities resume on Friday, 30 October 2026, while clearance activities begin on Monday, 2 November 2026.',
+      'The Office of the Dean, Student Affairs welcomes all fresh students for 2026/2027 and sets out the six-step resumption and registration protocol.',
     featured: true,
     content: [
-      'This is to inform all newly admitted students of AbdulRasaq Abubakar Toyin University (AATU) that academic activities will resume on Friday, 30 October 2026.',
-      'All clearance activities will start on Monday, 2 November 2026.',
-      'All fresh students are advised to take note and prepare accordingly.',
+      'Academic activities resume on Friday, 30 October 2026, while clearance activities begin on Monday, 2 November 2026.',
+      'The Office of the Dean, Student Affairs welcomes all newly admitted students of AbdulRasaq Abubakar Toyin University (AATU) for the 2026/2027 academic session.',
+      'All fresh students are required to follow the six-step resumption protocol: payment of prescribed fees on the student portal, arrival and luggage check at the main entrance, hostel accommodation, faculty and departmental registration, course registration, and commencement of academic activities.',
+      'The full notice also sets out hostel safety rules and important information on registration, payments, dress code, conduct and student welfare. Students and parents are encouraged to read the complete protocol below and download a copy for reference.',
+      'For enquiries or assistance, please contact the Office of Student Affairs.',
     ],
   },
   {
@@ -686,6 +700,103 @@ export const admissionFaqs = [
       'The university is located at Oke-Ogba, Ganmo, Ilorin, Kwara State, Nigeria. Prospective students and visitors are advised to confirm arrangements before travelling to the campus.',
   },
 ]
+
+export const fresherResumption = {
+  pdf: '/notices/resumption-protocol-fresh-students.pdf',
+  flyer: newFresherFlyerImg,
+  intro:
+    'Congratulations on your admission to AbdulRasaq Abubakar Toyin University, an institution committed to Advancing Generational Development. All fresh students are required to follow the steps below for a smooth resumption and registration process.',
+  steps: [
+    {
+      step: '01',
+      title: 'Payment of prescribed fees',
+      where: 'University Student Portal',
+      points: [
+        'Log in to the University student portal and pay the prescribed fees.',
+        'Download and print your payment receipts.',
+        'Select your preferred available hostel accommodation on the student portal.',
+        'Make the prescribed payment and present evidence for verification.',
+        'Ensure all payments are made through approved University channels.',
+      ],
+    },
+    {
+      step: '02',
+      title: 'Arrival and luggage check',
+      where: 'University Main Entrance',
+      points: [
+        'Present your admission details for identification.',
+        'Submit your luggage for the mandatory security check.',
+        'Proceed to the appropriate registration or hostel allocation point.',
+      ],
+    },
+    {
+      step: '03',
+      title: 'Hostel accommodation',
+      where: 'Hostels',
+      points: [
+        'Obtain your room allocation and report to the Hostel Porter for check-in.',
+        'Comply with all hostel rules and regulations.',
+      ],
+      note:
+        'The only approved means of cooking in the hostel is the use of a kerosene stove. The use of gas cookers, electric hot plates or any other cooking appliances in the hostel is strictly prohibited and should not be brought along at all. Kindly comply with this directive for safety reasons and to avoid any consequences for non-compliance.',
+    },
+    {
+      step: '04',
+      title: 'Faculty and departmental registration',
+      where: 'Respective Faculty and Department',
+      points: [
+        'Report to your Faculty and Department for documentation.',
+        'Present the required admission credentials and payment receipts.',
+        'Meet your Level Adviser for academic guidance and departmental orientation.',
+      ],
+    },
+    {
+      step: '05',
+      title: 'Course registration',
+      where: 'Student Portal / Department',
+      points: [
+        'Consult your Level Adviser for approval of courses.',
+        'Register the approved courses on the student portal.',
+        'Print and submit your course registration form as directed.',
+      ],
+    },
+    {
+      step: '06',
+      title: 'Commencement of academic activities',
+      where: 'Respective Departments and Lecture Venues',
+      points: [
+        'Obtain your lecture timetable and identify your lecture venues.',
+        'Attend all scheduled lectures, practicals and orientation programmes.',
+        'Comply with University academic regulations, dress code and code of conduct.',
+      ],
+    },
+  ],
+  closing:
+    'Regularly check the official University website, noticeboards and communication channels for important announcements. For enquiries or assistance, contact the Office of Student Affairs.',
+  importantInformation: [
+    'Complete all registration procedures within the period stipulated by the University.',
+    'Make all payments exclusively through University-approved channels.',
+    'Keep copies of all admission documents, payment receipts and registration forms.',
+    "Strictly comply with the University's approved dress code and code of conduct.",
+    'Observe hostel regulations, including the 7:00 p.m. movement restriction, subject to the University’s approved emergency procedures.',
+    'Avoid fighting, disturbances, unauthorised movements and other forms of misconduct.',
+    "Report student welfare concerns, accommodation challenges and other complaints to the Office of Students' Affairs.",
+    'Regularly check official University noticeboards and communication channels for important announcements.',
+    'Attend all compulsory orientation and academic guidance programmes.',
+    'Do NOT belong to unlawful associations.',
+    'Do NOT indulge in alcohol and hard drugs.',
+    'Avoid loitering around lecturers’ offices and other unauthorised places.',
+  ],
+  contact: {
+    office: 'Office of Student Affairs',
+    address: 'AbdulRasaq Abubakar Toyin University, Ganmo, Kwara State.',
+  },
+  reminder:
+    "All students are expected to demonstrate discipline, responsibility, respect for constituted authority and commitment to the University's rules and regulations. Ignorance of these regulations will not be accepted as an excuse for misconduct.",
+  managementNote:
+    'The University Management remains committed to providing a safe, orderly and conducive environment for academic excellence and personal development. We wish you a successful and rewarding academic session.',
+  signed: 'Office of the Dean, Student Affairs',
+}
 
 export const leadership = {
   viceChancellor: {

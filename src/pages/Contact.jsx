@@ -33,6 +33,14 @@ const subjects = [
   'Campus visit',
 ]
 
+const enquiryEmails = {
+  'Admissions enquiry': 'admission@aatu.edu.ng',
+  'Academic enquiry': 'acaplanning@aatu.edu.ng',
+  'General enquiry': 'info.aatu@aatu.edu.ng',
+  'Media enquiry': 'university.relation@aatu.edu.ng',
+  'Campus visit': 'info.aatu@aatu.edu.ng',
+}
+
 const socialLinks = [
   { label: 'Facebook', href: university.socials[0].href, Icon: FacebookIcon },
   { label: 'Instagram', href: university.socials[1].href, Icon: InstagramIcon },
@@ -275,6 +283,18 @@ export default function Contact() {
                       </option>
                     ))}
                   </select>
+                  <p className="mt-2 flex flex-wrap items-center gap-1.5 text-[0.7rem] leading-relaxed text-navy-900/60">
+                    <Mail className="size-3.5 shrink-0 text-crest-700" aria-hidden="true" />
+                    <span>
+                      Send to:{' '}
+                      <a
+                        href={`mailto:${enquiryEmails[form.subject]}`}
+                        className="font-semibold text-crest-700 underline-offset-2 transition-colors hover:text-crest-800 hover:underline"
+                      >
+                        {enquiryEmails[form.subject]}
+                      </a>
+                    </span>
+                  </p>
                 </div>
 
                 <div className="sm:col-span-2">

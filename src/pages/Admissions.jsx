@@ -26,6 +26,7 @@ import {
   admissionSteps,
   dressCodeFlyers,
   faculties,
+  fresherResumption,
   images,
   newProgrammes,
   programmes,
@@ -300,6 +301,218 @@ export default function Admissions() {
               </Link>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      <section id="freshers" className="scroll-mt-24 border-t border-navy-950/10 bg-white py-20 sm:py-24">
+        <div className="container-page">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-14">
+            <Reveal variant="scale">
+              <div className="lg:sticky lg:top-28">
+                <a
+                  href={images.newFresherFlyer}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group relative block overflow-hidden rounded-2xl border border-navy-950/10 bg-navy-50 shadow-soft"
+                  aria-label="Open the AATU welcome flyer for freshers"
+                >
+                  <img
+                    src={images.newFresherFlyer}
+                    alt="Welcome to AATU, Freshers flyer for the 2026/2027 academic session"
+                    loading="lazy"
+                    className="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  />
+                  <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-transparent p-5 pt-14" aria-hidden="true" />
+                  <span className="absolute right-4 top-4 grid size-9 place-items-center rounded-full bg-white/15 text-white backdrop-blur transition-colors duration-300 group-hover:bg-crest-600">
+                    <Maximize2 className="size-3.5" aria-hidden="true" />
+                  </span>
+                  <span className="absolute inset-x-0 bottom-0 p-5">
+                    <span className="block text-[0.56rem] font-semibold uppercase tracking-[0.18em] text-gold-300">
+                      Official welcome flyer · 2026/2027
+                    </span>
+                    <span className="mt-1 block font-display text-[1.3rem] leading-tight text-white">
+                      Welcome to AATU, freshers
+                    </span>
+                  </span>
+                </a>
+
+                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
+                  <a
+                    href={images.newFresherFlyer}
+                    download="AATU-Welcome-Freshers-2026-2027.jpeg"
+                    className="inline-flex items-center gap-1.5 text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-navy-900/70 transition-colors hover:text-navy-950"
+                  >
+                    <Download className="size-3.5" aria-hidden="true" />
+                    Download flyer
+                  </a>
+                  <a
+                    href={fresherResumption.pdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-navy-900/70 transition-colors hover:text-navy-950"
+                  >
+                    <FileText className="size-3.5" aria-hidden="true" />
+                    View notice
+                  </a>
+                </div>
+              </div>
+            </Reveal>
+
+            <div>
+              <SectionHeading
+                eyebrow="New students"
+                title="Welcome to AATU, freshers."
+                description={fresherResumption.intro}
+              />
+
+              <Reveal delay={100}>
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <a
+                    href={fresherResumption.pdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Read resumption protocol
+                    <FileText className="size-4" aria-hidden="true" />
+                  </a>
+                  <a
+                    href={fresherResumption.pdf}
+                    download="AATU-Resumption-Protocol-Fresh-Students.pdf"
+                    className="btn btn-outline"
+                  >
+                    Download PDF
+                    <Download className="size-4" aria-hidden="true" />
+                  </a>
+                </div>
+
+                <div className="mt-8 flex items-start gap-4 rounded-2xl border border-navy-950/10 bg-paper p-6">
+                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-navy-950 text-white">
+                    <Info className="size-4" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-navy-900/55">
+                      Need assistance?
+                    </p>
+                    <p className="mt-1.5 text-[0.82rem] leading-relaxed text-navy-900/75">
+                      {fresherResumption.contact.office}
+                      <br />
+                      {fresherResumption.contact.address}
+                    </p>
+                    <Link
+                      to="/contact"
+                      className="mt-3 inline-flex items-center gap-1.5 text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-crest-700 transition-colors hover:text-crest-800"
+                    >
+                      Contact student affairs
+                      <ArrowRight className="size-3.5" aria-hidden="true" />
+                    </Link>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {fresherResumption.steps.map((item, index) => (
+              <Reveal key={item.step} delay={(index % 3) * 80}>
+                <div className="flex h-full flex-col rounded-2xl border border-navy-950/10 bg-paper p-6">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="font-display text-[2.1rem] leading-none text-crest-600">
+                      {item.step}
+                    </span>
+                    <span className="grid size-8 place-items-center rounded-full border border-navy-950/10 text-navy-900/55">
+                      <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                    </span>
+                  </div>
+                  <h3 className="mt-5 font-display text-[1.3rem] leading-tight text-navy-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-[0.56rem] font-semibold uppercase tracking-[0.12em] text-navy-900/60 ring-1 ring-navy-950/10">
+                    <MapPin className="size-3" aria-hidden="true" />
+                    {item.where}
+                  </p>
+                  <ul className="mt-4 flex-1 space-y-2.5 border-t border-navy-950/10 pt-4">
+                    {item.points.map((point) => (
+                      <li key={point} className="flex items-start gap-2.5 text-[0.78rem] leading-relaxed text-navy-900/75">
+                        <span className="mt-0.5 grid size-4 shrink-0 place-items-center rounded-full bg-crest-50 text-crest-700">
+                          <Check className="size-2.5" aria-hidden="true" />
+                        </span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                  {item.note && (
+                    <p className="mt-4 rounded-xl border border-gold-400/40 bg-gold-100/50 p-3.5 text-[0.72rem] leading-relaxed text-navy-900/75">
+                      <span className="font-semibold text-navy-950">Note: </span>
+                      {item.note}
+                    </p>
+                  )}
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <p className="mt-8 rounded-xl border border-navy-950/10 bg-paper p-4 text-[0.76rem] leading-relaxed text-navy-900/70">
+            {fresherResumption.closing}
+          </p>
+
+          <div className="mt-10 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+            <Reveal>
+              <div className="h-full rounded-2xl border border-navy-950/10 bg-paper p-7">
+                <div className="flex items-center gap-2.5">
+                  <span className="grid size-9 place-items-center rounded-full bg-navy-950 text-white">
+                    <FileText className="size-3.5" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-crest-700">
+                      Important information
+                    </p>
+                    <p className="mt-0.5 text-[0.72rem] text-navy-900/55">
+                      For all fresh students and parents.
+                    </p>
+                  </div>
+                </div>
+                <ol className="mt-5 space-y-3">
+                  {fresherResumption.importantInformation.map((item, index) => (
+                    <li key={item} className="flex items-start gap-3 text-[0.8rem] leading-relaxed text-navy-900/75">
+                      <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-white text-[0.58rem] font-semibold text-navy-950 ring-1 ring-navy-950/10">
+                        {index + 1}
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <div className="flex h-full flex-col rounded-2xl border border-gold-400/40 bg-gold-100/40 p-7">
+                <span className="grid size-10 place-items-center rounded-full bg-white text-gold-500">
+                  <Info className="size-5" aria-hidden="true" />
+                </span>
+                <p className="mt-4 font-display text-[1.4rem] leading-tight text-navy-950">
+                  Important reminder
+                </p>
+                <p className="mt-3 text-[0.8rem] leading-relaxed text-navy-900/75">
+                  {fresherResumption.reminder}
+                </p>
+                <p className="mt-3 text-[0.8rem] leading-relaxed text-navy-900/75">
+                  {fresherResumption.managementNote}
+                </p>
+                <div className="mt-auto pt-6">
+                  <p className="text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-navy-900/55">
+                    Signed
+                  </p>
+                  <p className="mt-1.5 text-[0.82rem] font-semibold text-navy-950">
+                    {fresherResumption.signed}
+                  </p>
+                  <p className="mt-4 font-display text-[1.15rem] leading-tight text-crest-700">
+                    Welcome to AATU — Advancing Generational Development!
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
