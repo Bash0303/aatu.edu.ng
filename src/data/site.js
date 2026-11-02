@@ -974,7 +974,7 @@ export const leadershipProfiles = [
   },
   {
     name: 'Professor Moshood Zakariyah',
-    role: 'Professor of English Language',
+    role: 'Director of Academic Planning',
     image: moshoodZakariyahImg,
     imagePosition: 'center top',
     bio: [
